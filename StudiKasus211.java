@@ -24,5 +24,34 @@ public class StudiKasus211 {
                 System.out.print("Jumlah dokumen (0-4) : ");
                 int dokumen = Integer.parseInt(input.nextLine());
 
+                 
+                if (dokumen == 4) {
+                    System.out.println(
+                        "Status: Berhak memperoleh dana penghargaan "
+                        + "(PKM lolos pendanaan)."
+                    );
+                } else {
+                    System.out.println(
+                        "Status: Dokumen tidak lengkap (kurang "
+                        + (4 - dokumen)
+                        + " dokumen). Dana penghargaan tidak diberikan."
+                    );
+                }
+            } else {
+                System.out.println(
+                    "Status: Tidak memperoleh dana penghargaan "
+                    + "(PKM tidak lolos pendanaan)."
+                );
+            }
+
+        } else {
+            System.out.println(
+                "Status: Tidak memperoleh dana penghargaan "
+                + "(jenis kegiatan tidak termasuk ketentuan)."
+            );
+        }
+        
+        input.close();
+
     }
 }
